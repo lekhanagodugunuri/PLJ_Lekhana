@@ -19,10 +19,9 @@ public class Movie {
     @NotNull
     @Column(name = "movie_name")
     private String movieName;
-
     @Column(name = "movie_price")
     private Integer moviePrice;
-
     @Column(name = "movie_genre")
     private Double movieGenre;
 }
+
