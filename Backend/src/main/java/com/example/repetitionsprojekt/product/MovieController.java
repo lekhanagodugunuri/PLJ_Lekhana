@@ -31,4 +31,17 @@ public class MovieController {
         return ResponseEntity.ok().body(service.createMovie(movie));
     }
 
+    @PutMapping("/{movieId}")
+    public ResponseEntity<Movie> updateMovie( @RequestBody Movie newMovie, @PathVariable Integer movieId) {
+        return ResponseEntity.ok().body(service.updateMovie(movieId, newMovie));
+    }
+
+
+    @DeleteMapping("/{movieId}")
+    public void deleteMovie( @PathVariable("movieId") Integer movieId) throws InstanceNotFoundException {
+        service.deleteMovie(movieId);
+    }
+
+
+
 }
