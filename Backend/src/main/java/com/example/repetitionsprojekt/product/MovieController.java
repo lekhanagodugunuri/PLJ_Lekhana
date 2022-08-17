@@ -13,6 +13,7 @@ import java.util.List;
 
 @RequestMapping("/movies")
 public class MovieController {
+
     @Autowired
     private final MovieService service;
 
@@ -36,12 +37,9 @@ public class MovieController {
         return ResponseEntity.ok().body(service.updateMovie(movieId, newMovie));
     }
 
-
     @DeleteMapping("/{movieId}")
     public void deleteMovie( @PathVariable("movieId") Integer movieId) throws InstanceNotFoundException {
         service.deleteMovie(movieId);
     }
-
-
 
 }
