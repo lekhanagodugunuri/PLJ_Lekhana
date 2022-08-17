@@ -13,7 +13,6 @@ import javax.persistence.*;
 @ToString
 public class Movie {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "movie_id")
     private Integer movieId;
     @NotNull
@@ -22,6 +21,6 @@ public class Movie {
     @Column(name = "movie_price")
     private Integer moviePrice;
     @Column(name = "movie_genre")
-    private Double movieGenre;
+    private String movieGenre;
 }
 
