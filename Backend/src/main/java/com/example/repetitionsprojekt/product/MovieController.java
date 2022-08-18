@@ -1,7 +1,7 @@
 package com.example.repetitionsprojekt.product;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,14 +10,13 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
-
+@CrossOrigin()
 @RequestMapping("/movies")
 public class MovieController {
 
-    @Autowired
     private final MovieService service;
 
-    @GetMapping
+    @GetMapping("/")
     public ResponseEntity<List<Movie>> getAllMovies() {
         return ResponseEntity.ok().body(service.getAllMovie());
     }
