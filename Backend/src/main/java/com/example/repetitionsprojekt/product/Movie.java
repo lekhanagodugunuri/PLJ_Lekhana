@@ -13,7 +13,6 @@ import javax.persistence.*;
 @ToString
 public class Movie {
     @Id
-
     @GeneratedValue(strategy = GenerationType.TABLE)
     @Column(name = "movie_id")
     private Integer movieId;
