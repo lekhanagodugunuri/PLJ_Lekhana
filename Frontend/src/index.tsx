@@ -9,6 +9,7 @@ import DetailPage from './components/pages/DetailPage';
 import LoginPage from './components/pages/LoginPage';
 import AboutUsPage from './components/pages/AboutUsPage';
 import CreateMoviePage from './components/pages/CreateMoviePage';
+import UpdateMovie from './components/pages/UpdateMovie';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -23,6 +24,7 @@ root.render(
         <Route path="/movies/:id" element={<DetailPage />} />
         <Route path="/aboutus" element={<AboutUsPage />} />
         <Route path="/movies/create" element={<CreateMoviePage/>}/>
+        <Route path="/movies/update/:id" element={<UpdateMovie/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

@@ -5,7 +5,7 @@ import { deleteMovieById, getMovieById } from "../../MovieService";
 import BuyButton from "../atoms/BuyButton";
 
 import DetailButton from "../atoms/DetailButton";
-import UpdateButton1 from "../atoms/UpdateButton";
+
 import MovieNavBar from "../molecules/MovieNavBar";
 import "./detail.css";
 function DetailCard1() {
@@ -32,7 +32,7 @@ function DetailCard1() {
   const navigate = useNavigate();
   const handleDelete = () => {
     deleteMovieById(id!).then(() => {
-      navigate("/movies");
+      navigate("/movies/");
     });
   };
 
@@ -60,9 +60,21 @@ function DetailCard1() {
           <p>Price: {movie?.moviePrice} </p>
 
           <BuyButton></BuyButton>
-          <UpdateButton1></UpdateButton1>
+          
           <Button variant="contained" color="error" onClick={handleDelete}>
         Delete
+      </Button>
+      <Button
+        className="update"
+        variant="outlined"
+        color="success"
+        size="medium"
+        onClick={() => {
+          navigate("/movies/update/" + id);
+        }}
+      >
+       
+        Update
       </Button>
         </Card>
       </div>
