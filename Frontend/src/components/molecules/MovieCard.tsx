@@ -34,6 +34,7 @@ export default function MovieCard1() {
     display: "block",
     height: "30vw",
     width: "30vw",
+    backgroundColor: '#f8f4eb',
   };
 
   return (

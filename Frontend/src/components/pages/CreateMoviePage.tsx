@@ -5,6 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import { useFormik } from "formik";
 import { addMovie } from "../../MovieService";
+import MovieNavBar from "../molecules/MovieNavBar";
 
 export default function MovieCreate() {
   const { id } = useParams();
@@ -35,6 +36,8 @@ export default function MovieCreate() {
       });
   };
   return (
+    <div>
+    <MovieNavBar></MovieNavBar>
     <form onSubmit={formik.handleSubmit}>
       <div>
         <h1>New Movie</h1>
@@ -61,5 +64,6 @@ export default function MovieCreate() {
       </div>
       <button type="submit">Submit</button>
     </form>
+    </div>
   )
 }

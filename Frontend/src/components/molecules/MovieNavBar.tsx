@@ -15,8 +15,15 @@ function Navbar() {
   const navigateToAboutUs = () => {
     navigate("/aboutus");
   };
+
+  const cardStyle = {
+    
+    backgroundColor: '#d1bc8a',
+  };
+
   return (
-    <AppBar position="static">
+    
+    <AppBar position="static" style={cardStyle}>
       <Toolbar>
         <Typography variant="h6">FilmCity</Typography>
         <Button color="inherit" onClick={navigateToLogin}>
@@ -39,6 +46,7 @@ function Navbar() {
         
       </Toolbar>
     </AppBar>
+   
   );
 }
 

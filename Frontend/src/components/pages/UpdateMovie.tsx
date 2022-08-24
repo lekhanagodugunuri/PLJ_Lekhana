@@ -5,6 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import { Formik, useFormik } from "formik";
 import { updateMovie } from "../../MovieService";
+import MovieNavBar from "../molecules/MovieNavBar";
 export default function MovieUpdate(){
     const{id}=useParams();
     const navigate = useNavigate();
@@ -31,7 +32,10 @@ const formik = useFormik({
         postMessage(e.response.data);
       });
     }
-return(<form onSubmit={formik.handleSubmit}>
+return(
+    <div>
+<MovieNavBar></MovieNavBar>
+<form onSubmit={formik.handleSubmit}>
     <div>
      <label htmlFor="id">id</label>
       <input
@@ -79,5 +83,6 @@ return(<form onSubmit={formik.handleSubmit}>
     </div>
     <button type="submit">Submit</button>
   </form>
+  </div>
 )
 }
