@@ -7,12 +7,14 @@ import javax.persistence.*;
 
 @Getter
 @Setter
-@Entity
+@Entity (name = "movie")
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
 public class Movie {
     @Id
+
+    @GeneratedValue(strategy = GenerationType.TABLE)
     @Column(name = "movie_id")
     private Integer movieId;
     @NotNull
