@@ -10,6 +10,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.cors.CorsConfiguration;
 
 @EnableWebSecurity
 @RequiredArgsConstructor
@@ -34,10 +35,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        CorsConfiguration cors = new CorsConfiguration().applyPermitDefaultValues();
+        cors.addAllowedMethod("POST");
+        cors.addAllowedMethod("PUT");
+        cors.addAllowedMethod("DELETE");
+        http.cors().configurationSource(request -> cors);
         http.csrf().disable().httpBasic().and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
                 .authorizeRequests()
                 .antMatchers("/users/").permitAll()
-                .antMatchers("/movies/**").hasAnyRole("ADMIN")
+                .antMatchers("/**").hasAnyRole("ADMIN")
                 .antMatchers("/").hasAnyRole("USER")
                 .and()
                 .formLogin();
