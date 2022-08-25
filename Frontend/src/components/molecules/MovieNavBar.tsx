@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 
 function Navbar() {
+
   const navigate = useNavigate();
 
   const navigateToLogin = () => {
@@ -43,8 +44,9 @@ function Navbar() {
         >
           Create
         </Button>
-        
+      
       </Toolbar>
+    
     </AppBar>
    
   );

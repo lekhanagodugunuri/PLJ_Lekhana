@@ -10,10 +10,11 @@ export default function Products() {
   return (
     <div>
       
-      <MovieNavBar></MovieNavBar>                                                                         
-
-      <MovieCard></MovieCard>
-
+      <MovieNavBar></MovieNavBar>  
+      <div id="products">                                                                      
+    <MovieCard></MovieCard>
+    
+    </div> 
     </div>
   );
   }

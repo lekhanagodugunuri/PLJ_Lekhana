@@ -1,5 +1,6 @@
 import {
   Button,
+  Card,
   Checkbox,
   FormControlLabel,
   Grid,
@@ -11,9 +12,17 @@ import React from "react";
 import MovieNavBar from "../molecules/MovieNavBar";
 
 function Login() {
+  const cardStyle = {
+    bgcolor: "#fff4fc",
+    display: "block",
+    height: "25vw",
+    width: "25vw",
+    backgroundColor: '#f8f4eb',
+  };
   return (
-    <div>
+    <div id="login">
       <MovieNavBar></MovieNavBar>
+      <Card style={cardStyle}>
       <h2>LOGIN</h2>
 
       <Grid>
@@ -27,6 +36,7 @@ function Login() {
           <Button> Login </Button>
         </Grid>
       </Grid>
+      </Card>
     </div>
   );
 }

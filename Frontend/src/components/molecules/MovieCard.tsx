@@ -2,6 +2,7 @@ import { Button, Card } from "@mui/material";
 import React, { Component, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getMovie } from "../../MovieService";
+import './card.css';
 
 
 import BuyButton from "../atoms/BuyButton";
@@ -35,13 +36,14 @@ export default function MovieCard1() {
     height: "30vw",
     width: "30vw",
     backgroundColor: '#f8f4eb',
+   
   };
 
   return (
-    <div className="card">
+    <div>
       {movieN.map((movie: Movie) => {
         return (
-          <div>
+          <div id="card2">
             <Card style={cardStyle}>
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA1ptemhH88HIHHHHKV_gEsfUtRjWsrVzO0w&usqp=CAU"

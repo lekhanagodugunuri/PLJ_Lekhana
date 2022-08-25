@@ -27,6 +27,7 @@ function DetailCard1() {
     display: "block",
     height: "29vw",
     width: "25vw",
+    backgroundColor: '#f8f4eb',
   };
 
   const navigate = useNavigate();

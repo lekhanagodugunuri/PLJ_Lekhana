@@ -2,11 +2,19 @@ import { Button, Card, TextField } from "@mui/material";
 import React, { useEffect, useState } from "react";
 
 import { useNavigate, useParams } from "react-router-dom";
-
+import "./update.css";
 import { Formik, useFormik } from "formik";
 import { updateMovie } from "../../MovieService";
 import MovieNavBar from "../molecules/MovieNavBar";
 export default function MovieUpdate(){
+
+  const cardStyle = {
+    bgcolor: "#fff4fc",
+    display: "block",
+    height: "25vw",
+    width: "25vw",
+    backgroundColor: '#f8f4eb',
+  };
     const{id}=useParams();
     const navigate = useNavigate();
 const formik = useFormik({
@@ -35,7 +43,10 @@ const formik = useFormik({
 return(
     <div>
 <MovieNavBar></MovieNavBar>
+ <div id="update">
+  <Card style={cardStyle}>
 <form onSubmit={formik.handleSubmit}>
+
     <div>
      <label htmlFor="id">id</label>
       <input
@@ -82,7 +93,12 @@ return(
       />
     </div>
     <button type="submit">Submit</button>
+    
   </form>
+  </Card>
   </div>
+ 
+  </div>
+ 
 )
 }
