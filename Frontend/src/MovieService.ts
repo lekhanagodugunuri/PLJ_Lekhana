@@ -11,7 +11,7 @@ type Movie = {
 };
 
 export async function getMovie() {
-  console.log(defaultAxiosInstance.get("movies/"), "ksjhdsdgfs");
+  console.log(defaultAxiosInstance.get("movies/",{auth:{username:'lekhana', password:'21'}}).catch((error) =>{throw error} ), "ksjhdsdgfs");
   const data = await defaultAxiosInstance.get("movies/").catch((error) => {
     throw error;
   });

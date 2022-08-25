@@ -13,6 +13,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+
 public class Users {
     @Id
     @Column(name = "user_id")

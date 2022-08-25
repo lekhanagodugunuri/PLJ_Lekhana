@@ -19,7 +19,6 @@ public class UserService implements UserDetailsService {
 
     private final UserRepository userRepository;
 
-
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
@@ -54,7 +53,6 @@ public class UserService implements UserDetailsService {
         } else {
             userRepository.deleteById(userId);
         }
-
 
     }
 
