@@ -2,13 +2,10 @@ import { Button, Card } from "@mui/material";
 import React, { Component, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getMovie } from "../../MovieService";
-import './card.css';
-
+import "./card.css";
 
 import BuyButton from "../atoms/BuyButton";
 
-import DetailButton from "../atoms/DetailButton";
-  
 type Movie = {
   movieId: string;
   movieName: string;
@@ -35,8 +32,7 @@ export default function MovieCard1() {
     display: "block",
     height: "30vw",
     width: "30vw",
-    backgroundColor: '#f8f4eb',
-   
+    backgroundColor: "#f8f4eb",
   };
 
   return (
@@ -54,13 +50,10 @@ export default function MovieCard1() {
               <p>Price: {movie.moviePrice}</p>
               <BuyButton></BuyButton>
               <Button
-                onClick={() => {
-                  navigate("/movies/" + movie.movieId);
-                }}
-              >
+                onClick={() => {navigate("/movies/" + movie.movieId);}}>
                 More Details
               </Button>
-              </Card>
+            </Card>
           </div>
         );
       })}
