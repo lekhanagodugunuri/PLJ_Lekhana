@@ -10,7 +10,11 @@ function DetailButton() {
   };
 
   {
-    return <Button variant="outlined" color="secondary" onClick={navigateToDetail}>Details</Button>;
+    return (
+      <Button variant="outlined" color="secondary" onClick={navigateToDetail}>
+        Details
+      </Button>
+    );
   }
 }
 export default DetailButton;

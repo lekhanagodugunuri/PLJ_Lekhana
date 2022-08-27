@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 
 function Navbar() {
-
   const navigate = useNavigate();
 
   const navigateToLogin = () => {
@@ -18,12 +17,10 @@ function Navbar() {
   };
 
   const cardStyle = {
-    
-    backgroundColor: '#d1bc8a',
+    backgroundColor: "#d1bc8a",
   };
 
   return (
-    
     <AppBar position="static" style={cardStyle}>
       <Toolbar>
         <Typography variant="h6">FilmCity</Typography>
@@ -44,11 +41,8 @@ function Navbar() {
         >
           Create
         </Button>
-      
       </Toolbar>
-    
     </AppBar>
-   
   );
 }
 

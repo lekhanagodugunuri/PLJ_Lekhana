@@ -11,41 +11,46 @@ type Movie = {
 };
 
 export async function getMovie() {
-  console.log(defaultAxiosInstance.get("movies/" ), "ksjhdsdgfs");
-  const data = await defaultAxiosInstance.get("movies/", {
-    auth: {
-      username: 'lekhana',
-      password: '21'
-    }
-  })
-  .catch((error) => {
-    throw error;
-  });
+  console.log(defaultAxiosInstance.get("movies/"), "ksjhdsdgfs");
+  const data = await defaultAxiosInstance
+    .get("movies/", {
+      auth: {
+        username: "lekhana",
+        password: "21",
+      },
+    }) 
+    .catch((error) => {
+      throw error;
+    });
   console.log("after fetch");
   console.log(data);
   return data["data"];
 }
 
 export async function getMovieById(id: string) {
-  const data = await defaultAxiosInstance.get("/movies/" + id, 
-  {auth: {
-    username: 'lekhana',
-    password: '21'
-  }});
+  const data = await defaultAxiosInstance.get("/movies/" + id, {
+    auth: {
+      username: "lekhana",
+      password: "21",
+    },
+  });
   console.log("after fetch");
   return data["data"];
 }
 
 export async function addMovie(params: Movie) {
-  const res = await defaultAxiosInstance.post("/movies", {
-    movieName: params.movieName,
-    moviePrice: params.moviePrice,
-  }, 
-  {auth: {
-    username: 'lekhana',
-    password: '21'
-  }}
-  
+  const res = await defaultAxiosInstance.post(
+    "/movies",
+    {
+      movieName: params.movieName,
+      moviePrice: params.moviePrice,
+    },
+    {
+      auth: {
+        username: "lekhana",
+        password: "21",
+      },
+    }
   );
   if (res && res.status === 200) {
     console.log("movie successfully created");
@@ -59,10 +64,12 @@ export async function updateMovie(params: Movie) {
       movieGenre: params.movieGenre,
       moviePrice: params.moviePrice,
     },
-    {auth: {
-      username: 'lekhana',
-      password: '21'
-    }}
+    {
+      auth: {
+        username: "lekhana",
+        password: "21",
+      },
+    }
   );
   if (res && res.status === 200) {
     console.log("movie successfully created");
@@ -70,11 +77,12 @@ export async function updateMovie(params: Movie) {
 }
 export async function deleteMovieById(id: string) {
   const res = await defaultAxiosInstance
-    .delete("/movies/" + id,
-    {auth: {
-      username: 'lekhana',
-      password: '21'
-    }})
+    .delete("/movies/" + id, {
+      auth: {
+        username: "lekhana",
+        password: "21",
+      },
+    })
     .catch((error) => {
       throw error;
     });

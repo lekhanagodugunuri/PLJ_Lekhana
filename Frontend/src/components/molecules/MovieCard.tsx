@@ -50,7 +50,10 @@ export default function MovieCard1() {
               <p>Price: {movie.moviePrice}</p>
               <BuyButton></BuyButton>
               <Button
-                onClick={() => {navigate("/movies/" + movie.movieId);}}>
+                onClick={() => {
+                  navigate("/movies/" + movie.movieId);
+                }}
+              >
                 More Details
               </Button>
             </Card>

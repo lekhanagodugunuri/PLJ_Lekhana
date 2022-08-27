@@ -17,25 +17,25 @@ function Login() {
     display: "block",
     height: "25vw",
     width: "25vw",
-    backgroundColor: '#f8f4eb',
+    backgroundColor: "#f8f4eb",
   };
   return (
     <div id="login">
       <MovieNavBar></MovieNavBar>
       <Card style={cardStyle}>
-      <h2>LOGIN</h2>
+        <h2>LOGIN</h2>
 
-      <Grid>
         <Grid>
-          <TextField label="Username"></TextField>
+          <Grid>
+            <TextField label="Username"></TextField>
+          </Grid>
+          <Grid>
+            <TextField label="Password" type={"password"}></TextField>
+          </Grid>
+          <Grid>
+            <Button> Login </Button>
+          </Grid>
         </Grid>
-        <Grid>
-          <TextField label="Password" type={"password"}></TextField>
-        </Grid>
-        <Grid>
-          <Button> Login </Button>
-        </Grid>
-      </Grid>
       </Card>
     </div>
   );

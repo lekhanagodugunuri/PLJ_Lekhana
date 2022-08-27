@@ -9,12 +9,10 @@ import MovieNavBar from "../molecules/MovieNavBar";
 export default function Products() {
   return (
     <div>
-      
-      <MovieNavBar></MovieNavBar>  
-      <div id="products">                                                                      
-    <MovieCard></MovieCard>
-    
-    </div> 
+      <MovieNavBar></MovieNavBar>
+      <div id="products">
+        <MovieCard></MovieCard>
+      </div>
     </div>
   );
-  }
+}

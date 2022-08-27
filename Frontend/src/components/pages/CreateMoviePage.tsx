@@ -13,8 +13,8 @@ export default function MovieCreate() {
     display: "flex",
     height: "17vw",
     width: "17vw",
-    backgroundColor: '#f8f4eb',
-    justifyContent:'center'
+    backgroundColor: "#f8f4eb",
+    justifyContent: "center",
   };
 
   const { id } = useParams();
@@ -46,40 +46,37 @@ export default function MovieCreate() {
   };
   return (
     <div className="create">
-    <MovieNavBar></MovieNavBar>
-    <Card style={cardStyle}>
-    <div>
-   
-    <form onSubmit={formik.handleSubmit}>
-   
-      <div>
-        
-        <h1>New Movie</h1>
-        <label htmlFor="movieName">Name</label>
-        <input
-          id="movieName"
-          name="movieName"
-          type="text"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.movieName}
-        />
-      </div>
-      <div>
-        <label htmlFor="moviePrice">Price</label>
-        <input
-          id="moviePrice"
-          name="moviePrice"
-          type="text"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.moviePrice}
-        />
-      </div>
-      <button type="submit">Submit</button>
-    </form>
+      <MovieNavBar></MovieNavBar>
+      <Card style={cardStyle}>
+        <div>
+          <form onSubmit={formik.handleSubmit}>
+            <div>
+              <h1>New Movie</h1>
+              <label htmlFor="movieName">Name</label>
+              <input
+                id="movieName"
+                name="movieName"
+                type="text"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.movieName}
+              />
+            </div>
+            <div>
+              <label htmlFor="moviePrice">Price</label>
+              <input
+                id="moviePrice"
+                name="moviePrice"
+                type="text"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.moviePrice}
+              />
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </Card>
     </div>
-    </Card>
-    </div>
-  )
+  );
 }

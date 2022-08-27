@@ -27,7 +27,7 @@ function DetailCard1() {
     display: "block",
     height: "29vw",
     width: "25vw",
-    backgroundColor: '#f8f4eb',
+    backgroundColor: "#f8f4eb",
   };
 
   const navigate = useNavigate();
@@ -61,22 +61,21 @@ function DetailCard1() {
           <p>Price: {movie?.moviePrice} </p>
 
           <BuyButton></BuyButton>
-          
+
           <Button variant="contained" color="error" onClick={handleDelete}>
-        Delete
-      </Button>
-      <Button
-        className="update"
-        variant="outlined"
-        color="success"
-        size="medium"
-        onClick={() => {
-          navigate("/movies/update/" + id);
-        }}
-      >
-       
-        Update
-      </Button>
+            Delete
+          </Button>
+          <Button
+            className="update"
+            variant="outlined"
+            color="success"
+            size="medium"
+            onClick={() => {
+              navigate("/movies/update/" + id);
+            }}
+          >
+            Update
+          </Button>
         </Card>
       </div>
     </div>

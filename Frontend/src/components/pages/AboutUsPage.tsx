@@ -14,7 +14,7 @@ function aboutus() {
     display: "block",
     height: "26vw",
     width: "100vw",
-    backgroundColor: '#f8f4eb'
+    backgroundColor: "#f8f4eb",
   };
 
   return (
@@ -24,7 +24,6 @@ function aboutus() {
         <Typography variant="h5" component="div">
           About us
         </Typography>
-      
       </Card>
     </div>
   );
